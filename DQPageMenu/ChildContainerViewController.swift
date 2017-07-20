@@ -130,7 +130,7 @@ class ChildContainerViewController: UIViewController {
             subvc.didMove(toParentViewController: self)
         }
         
-        let titleViewWidth: CGFloat = 200
+        let titleViewWidth: CGFloat = UIScreen.main.bounds.width
         let titleViewHeight: CGFloat = 44
         let stackViewHeight: CGFloat = 40
         
