@@ -1,5 +1,5 @@
 //
-//  WhiteViewController.swift
+//  ChildContainerViewController.swift
 //  DQPageMenu
 //
 //  Created by Ju on 2017/7/6.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class WhiteViewController: UIViewController {
+class ChildContainerViewController: UIViewController {
     
-    // MAR: - Public
-    var menus: [UIButton] = [UIButton]()
-    var viewControllers: [UIViewController] = [UIViewController]()
+    // MAR: - Private ... copy from  MenuContainerViewController
+    private var menus: [UIButton] = [UIButton]()
+    private var viewControllers: [UIViewController] = [UIViewController]()
 
-    var itemColor = UIColor.white
-    var indicatorColor = UIColor.red
+    private var itemColor = UIColor.white
+    private var indicatorColor = UIColor.red
 
     // MARK: - Private properties
     private var scrollView: UIScrollView!
@@ -252,7 +252,7 @@ class WhiteViewController: UIViewController {
 }
 
 
-extension WhiteViewController: UIScrollViewDelegate {
+extension ChildContainerViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x == 0.0 {
