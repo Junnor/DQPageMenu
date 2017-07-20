@@ -15,7 +15,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             tableView.dataSource = self
             tableView.delegate = self
             
-            tableView.rowHeight = 90
+            tableView.rowHeight = 70
         }
     }
     
@@ -26,7 +26,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.textLabel?.text = "Second \(indexPath.row)"
         return cell
     }
     

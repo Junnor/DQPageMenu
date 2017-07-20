@@ -1,14 +1,14 @@
 //
-//  ThirdViewController.swift
-//  PageScroll
+//  ThreeViewController.swift
+//  DQPageMenu
 //
-//  Created by Ju on 2017/7/5.
-//  Copyright © 2017年 Ju. All rights reserved.
+//  Created by nyato喵特 on 2017/7/20.
+//  Copyright © 2017年 nyato喵特. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ThreeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -25,15 +25,13 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath)
-        cell.textLabel?.text = "Third \(indexPath.row)"
+        cell.textLabel?.text = "Three \(indexPath.row)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(self), didSelectRowAt: \(indexPath)")
         self.tableView.deselectRow(at: indexPath, animated: true)
-
-        performSegue(withIdentifier: "noBarV", sender: nil)
     }
-
+    
 }

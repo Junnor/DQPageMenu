@@ -27,7 +27,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             tableView.dataSource = self
             tableView.delegate = self
             
-            tableView.rowHeight = 120
+            tableView.rowHeight = 70
         }
     }
     
@@ -38,7 +38,8 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        
+        cell.textLabel?.text = "First \(indexPath.row)"
         return cell
     }
     

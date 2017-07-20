@@ -38,9 +38,9 @@ class ViewController: UIViewController {
         let gray = UIButton()
         let purple = UIButton()
         
-        red.setTitle("red", for: .normal)
-        gray.setTitle("gray", for: .normal)
-        purple.setTitle("purple", for: .normal)
+        red.setTitle("One", for: .normal)
+        gray.setTitle("Two", for: .normal)
+        purple.setTitle("Three", for: .normal)
         
         items.append(red)
         items.append(gray)
