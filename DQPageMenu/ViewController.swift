@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // *********************************************
-    //  Add MenuContainerViewController like it
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        initializerMenuViewController()
+    }
+    
     private var addedPageViewController = false
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+    private func initializerMenuViewController() {
         if !addedPageViewController {
             addedPageViewController = true
             
@@ -27,7 +29,6 @@ class ViewController: UIViewController {
             scrollContainerVC.didMove(toParentViewController: self)
         }
     }
-    // *********************************************
     
     // MRAK: Test data
     private func pageItems() -> [UIButton] {
